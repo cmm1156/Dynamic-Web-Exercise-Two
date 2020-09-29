@@ -1,0 +1,27 @@
+.Header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1080px;
+  padding: 0 25px; /*gutters*/
+}
+
+.Header nav a {
+  color: black;
+  font-size: 24px;
+  font-weight: normal;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.Header nav a:hover {
+  color: magenta;
+}
+
+/*--- Home Styling ---*/
+.Home {
+  margin: 0 auto;
+  max-width: 1080px;
+  padding: 0 25px; /*gutters*/
+}
