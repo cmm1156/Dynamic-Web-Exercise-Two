@@ -7,10 +7,10 @@ function Header() {
         <h1>Weather App</h1>
       </div>
       <nav>
-        <a href="#">Seoul</a>
-        <a href="#">Chicago</a>
-        <a href="#">Toronto</a>
-        <a href="#">Shanghai</a>
+        <a href="href/?city=Seoul">Seoul</a>
+        <a href="href/?city=Chicago">Chicago</a>
+        <a href="href/?city=Toronto">Toronto</a>
+        <a href="href/?city=Shanghai">Shanghai</a>
       </nav>
     </header>
   );
