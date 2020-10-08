@@ -3,8 +3,10 @@ import axios from "axios"; // this is importing from the package.json
 import { useHistory } from "react-router-dom";
 
 import Header from "../components/Header";
+import WeatherImage from "../components/WeatherImage";
 
 const weatherKey = `5b82567045514b74df6771aaa7d2a828`;
+// const API_KEY = process.env.REACT_APP_API_KEY; //`5b82567045514b74df6771aaa7d2a828`;
 
 function Home() {
   const history = useHistory();
@@ -33,7 +35,6 @@ function Home() {
     if (city) {
       setCity(city);
     }
-    // console.log("city", city)
   }, [history]);
 
   const {
@@ -90,15 +91,34 @@ function Home() {
     <>
       <Header />
       <main className="Home">
-        <h2>Weather in {city}</h2>
+        <h2>
+          Weather in <span>{city}</span>
+        </h2>
         <div className="WeatherInfo">
-          <p>Weather Type: {weatherType}</p>
-          <p>Current Temperature: {currentTemp}</p>
-          <p>High Temp: {highTemp}</p>
-          <p>Low Temp: {lowTemp}</p>
-          <p>Cloudiness: {cloudiness}</p>
-          <p>Humidity: {humidity}</p>
-          <p>Wind Speed: {windSpeed}</p>
+          <div className="WeatherInfo_Basic">
+            <div className="WeatherInfo_Image">
+              <WeatherImage weatherType={weatherType} />
+            </div>
+            <p className="WeatherInfo_Type">{weatherType}</p>
+            <h3 className="Label">Current Temperature</h3>
+            <p className="WeatherInfo_Temperature">{currentTemp}</p>
+          </div>
+          <div className="WeatherInfo_Extra">
+            <div className="WeatherInfo_Extra_Column">
+              <h3 className="Label">High Temperature:</h3>
+              <p className="WeatherInfo_Temperature_Small">{highTemp}</p>
+              <h3 className="Label">Low Temperature:</h3>
+              <p className="WeatherInfo_Temperature_Small">{lowTemp}</p>
+            </div>
+            <div className="WeatherInfo_Extra_Column">
+              <h3 className="Label">Cloudiness:</h3>
+              <p className="WeatherInfo_Temperature_Small">{cloudiness}</p>
+              <h3 className="Label">Humidity:</h3>
+              <p className="WeatherInfo_Temperature_Small">{humidity}</p>
+              <h3 className="Label">Wind Speed:</h3>
+              <p className="WeatherInfo_Temperature_Small">{windSpeed}</p>
+            </div>
+          </div>
         </div>
       </main>
     </>
