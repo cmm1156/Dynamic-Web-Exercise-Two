@@ -23,7 +23,7 @@
 .Home {
   margin: 0 auto;
   max-width: 1080px;
-  padding: 0 25px; /*gutters*/
+  padding: 0 25px 60px; /*gutters*/
 }
 
 .Home h2 {
@@ -88,8 +88,35 @@
 }
 
 .Label {
+  color: black;
   font-size: 16px;
   letter-spacing: 2px;
   margin: 0;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 640px) {
+  .Header {
+    flex-direction: column;
+  }
+
+  .Header nav {
+    /* display: flex; */
+    /* flex-direction: column; */
+  }
+
+  .Header nav a {
+    font-size: 14px;
+  }
+
+  .WeatherInfo {
+    flex-direction: column;
+  }
+
+  .WeatherInfo_Extra {
+    border: 1px solid black;
+    border-top: none;
+
+    flex-direction: column;
+  }
 }
