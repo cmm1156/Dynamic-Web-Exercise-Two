@@ -99,10 +99,12 @@ function Home() {
           Weather in <span>{city}</span>
         </h2>
         <div className="WeatherInfo">
+          
           <div
-            className="WeatherInfo_Basic"
+            className="WeatherInfo_Basic hexagon"
             style={{ backgroundColor: `rgb(0,0,0,${cloudinessValue / 200})` }}
           >
+            <div className="WeatherInfo_Basic_Items">
             <div className="WeatherInfo_Image">
               <WeatherImage weatherType={weatherType} />
             </div>
@@ -110,19 +112,21 @@ function Home() {
             <h3 className="Label">Current Temperature</h3>
             <p className="WeatherInfo_Temperature">{currentTemp}</p>
           </div>
-          <div className="WeatherInfo_Extra">
+          </div>
+          
+          <div className="WeatherInfo_Extra hexagon">
             <div className="WeatherInfo_Extra_Column">
-              <h3 className="Label">High Temperature:</h3>
+              <h3 className="Label Label2">High Temperature:</h3>
               <p className="WeatherInfo_Temperature_Small">{highTemp}</p>
-              <h3 className="Label">Low Temperature:</h3>
+              <h3 className="Label Label2">Low Temperature:</h3>
               <p className="WeatherInfo_Temperature_Small">{lowTemp}</p>
             </div>
             <div className="WeatherInfo_Extra_Column">
-              <h3 className="Label">Cloudiness:</h3>
+              <h3 className="Label Label2">Cloudiness:</h3>
               <p className="WeatherInfo_Temperature_Small">{cloudiness}</p>
-              <h3 className="Label">Humidity:</h3>
+              <h3 className="Label Label2">Humidity:</h3>
               <p className="WeatherInfo_Temperature_Small">{humidity}</p>
-              <h3 className="Label">Wind Speed:</h3>
+              <h3 className="Label Label2">Wind Speed:</h3>
               <p className="WeatherInfo_Temperature_Small">{windSpeed}</p>
             </div>
           </div>

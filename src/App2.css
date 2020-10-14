@@ -1,0 +1,284 @@
+.Header {
+  font-family: "Cairo", sans-serif;
+  font-weight: 700;
+  /* font-family: "Roboto Condensed", sans-serif; */
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1080px;
+  padding: 0 25px; /*gutters*/
+  background-color: black;
+  color: orangered;
+}
+
+.Header nav a {
+  font-family: "Cairo", sans-serif;
+  /* font-family: "Open Sans", sans-serif; */
+  color: black;
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0 10px;
+  text-decoration: none;
+  color: white;
+}
+
+.Header nav a:hover {
+  color: #ff7442;
+}
+
+/*--- Home Styling ---*/
+.Home {
+  /* background-color: #001940; */
+  margin: 0 auto;
+  margin-top: 20px;
+  max-width: 1080px;
+  padding: 0 25px 60px; /*gutters*/
+  align-self: center;
+}
+
+.Home h2 {
+  font-size: 48px;
+  font-weight: normal;
+  margin: 0;
+  margin-bottom: 30px;
+  /* font-family: "Open Sans", sans-serif; */
+  font-family: "Cairo", sans-serif;
+}
+
+.Home h2 span {
+  color: orangered;
+}
+
+.WeatherInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.WeatherInfo_Basic {
+  /* color: #ff8b2b; */
+  /* border: 4px solid orangered; */
+  /* border-radius: 15px 0px 0px 15px; */
+  /* flex-basis: 30%; */
+  /* margin-top: -50px; */
+  padding: 30px;
+  text-align: center;
+  font-family: "Cairo", sans-serif;
+  line-height: 75px;
+}
+
+.WeatherInfo_Basic_Items {
+  margin-top: -80px;
+}
+
+.WeatherInfo_Basic p h3 {
+  margin-bottom: 100px;
+}
+
+/* .WeatherInfo_Basic h3 {
+  font-size: 60px;
+  margin: 0;
+} */
+
+.WeatherInfo_Type {
+  font-size: 60px;
+  margin: 0;
+  margin-bottom: 30px;
+  color: orangered;
+  margin-top: 30px;
+}
+
+.WeatherInfo_Temperature {
+  font-size: 84px;
+  margin: 0;
+}
+
+.WeatherInfo_Temperature_Small {
+  font-size: 40px;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.WeatherInfo_Extra {
+  top: 488px;
+  right: 258px;
+  /* background-color: #001940; */
+  font-family: "Cairo", sans-serif;
+  color: black;
+  /* border: 4px solid orangered; */
+  border-radius: 0px 15px 15px 0px;
+  border-left: none;
+  display: flex;
+  flex-basis: 70%;
+  padding: 30px;
+  margin: 0 auto;
+}
+
+.WeatherInfo_Extra_Column {
+  margin-top: -50px;
+  /* flex-basis: 50%; */
+  padding: 41px;
+  line-height: 35px;
+}
+
+.WeatherInfo_Image {
+  color: orangered;
+  font-size: 150px;
+  width: 440px;
+}
+
+.Label {
+  font-family: "Cairo", sans-serif;
+  color: black;
+  font-size: 24px;
+  letter-spacing: 2px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.Label2 {
+  font-family: "Cairo", sans-serif;
+  color: black;
+  font-size: 18px;
+  letter-spacing: 2px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 640px) {
+  .hexagon {
+    position: relative;
+    width: 500px;
+    height: 288.68px;
+    background-color: #ffffff;
+    margin: 144.34px 0;
+    border-left: solid 5px #f46201;
+    border-right: solid 5px #f46201;
+  }
+
+  .hexagon:before,
+  .hexagon:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 353.55px;
+    height: 353.55px;
+    -webkit-transform: scaleY(0.5774) rotate(-45deg);
+    -ms-transform: scaleY(0.5774) rotate(-45deg);
+    transform: scaleY(0.5774) rotate(-45deg);
+    background-color: inherit;
+    left: 68.2233px;
+  }
+
+  .hexagon:before {
+    top: -176.7767px;
+    border-top: solid 7.0711px #f46201;
+    border-right: solid 7.0711px #f46201;
+  }
+
+  .hexagon:after {
+    bottom: -176.7767px;
+    border-bottom: solid 7.0711px #f46201;
+    border-left: solid 7.0711px #f46201;
+  }
+}
+
+/*
+
+
+
+
+
+
+
+
+
+
+
+*/
+
+@media screen and (max-width: 640px) {
+  .Header {
+    flex-direction: column;
+  }
+
+  .Header nav {
+    /* display: flex; */
+    /* flex-direction: column; */
+  }
+
+  .Header nav a {
+    font-size: 14px;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  .Label2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+
+  .WeatherInfo {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .WeatherInfo_Basic {
+    border: 4px solid orangered;
+    /* border-radius: 15px 0px 0px 15px; */
+    border-radius: 30px 30px 0px 0px;
+    color: black;
+
+    /* color: #ff8b2b; */
+    /* border: 4px solid orangered; */
+    /* border-radius: 15px 0px 0px 15px; */
+    /* flex-basis: 30%; */
+    /* margin-top: -50px; */
+    padding: 0px;
+    text-align: center;
+    font-family: "Cairo", sans-serif;
+    /* line-height: 0px; */
+  }
+
+  .WeatherInfo_Basic_Items {
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .WeatherInfo_Extra {
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 0px 0px 30px 30px;
+    border-top: none;
+
+    flex-direction: column;
+
+    /* font-family: "Cairo", sans-serif;
+    color: black;
+    display: flex;
+    flex-basis: 70%;
+    padding: 30px; */
+  }
+
+  .WeatherInfo_Temperature {
+    font-size: 84px;
+    margin: 0;
+  }
+
+  .WeatherInfo_Temperature_Small {
+    font-size: 48px;
+    margin: 0;
+    margin-bottom: 30px;
+  }
+
+  .WeatherInfo_Extra_Column {
+    margin-top: 0px;
+    flex-basis: 50%;
+    padding: 0px;
+    /* line-height: 0px; */
+  }
+}

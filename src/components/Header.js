@@ -11,6 +11,7 @@ function Header() {
         <a href="href/?city=Chicago">Chicago</a>
         <a href="href/?city=Toronto">Toronto</a>
         <a href="href/?city=Shanghai">Shanghai</a>
+        <a href="href/?city=New York City">New York City</a>
       </nav>
     </header>
   );
